@@ -3,28 +3,34 @@
 
 ## So what is Docker?
 
-Docker is a popular containerization open source project that has seen significant adoption since June 1, 2014 by a large number of major players in the cloud (e.g. Google, Amazon, Microsoft Azure).  Containerizastion would allow a web services group to develop with platform choices driven by their application needs rather than what Solaris/RedHat Enterprise is offered by a central IT group.
+Docker is a popular containerization open source project that has seen significant adoption since June 1, 2014 by a large number of major players in the cloud (e.g. Google, Amazon, Microsoft Azure).  Containerization would allow a web services group to develop with platform choices driven by their application needs rather than what might be secifically is offered by a central IT group (e.g. software versions dictated by the current Solaris/RedHat Enterprise release).
 
-If the central IT group supported Dockere containers individual departments could still utilize their resource but use the technologies that made the most sense for their applications (e.g. a Ruby Group or NodeJS group could be supported on the same infrastructure as the centralally maintained LAMP stack).
+If the central IT group supported Dockere containers individual departments could still utilize the centrally maintained resource but use the technologies that made the most sense for their applications (e.g. a Ruby Group or NodeJS group could be supported on the same infrastructure as the centrally maintained LAMP stack).
 
-Containers are a useful smaller unit than virtual machine to organization services around.
+Containers are a useful smaller unit in constrast to virtual machine for organizating services.
+
 
 ## Background on virtualization
 
-Problem: How do we meet peak usage demand?
+Problem: How do we meet peak usage demand on computer systems?
 
-Historically you did two things
+Historically two things
 
 1. Write more efficient software
 2. Buy more hardware resources
 
-### This created anther problem.
+
+This created anther problem.
 
 Problem: How come I need to have a system that is 99% idle all the time, is their something cheaper?
 
-Solution run more things on the hardware to drop the idle percentage but then you get cought back again when you need peak use resources...
+Solution: run more things on the hardware to drop the idle percentage
 
-This lead to hardware virtualization.  
+But this leads us right back to constraints during during peak usage times.
+
+This lead to hardware virtualization and eventually to virtual machines you could rent in the cloud. Amazon with their AWS
+unit was an early pioneer in commercializing this approach.
+
 
 ## Hardware Virtualization provided some benefits
 
@@ -33,15 +39,21 @@ This lead to hardware virtualization.
 
 This means you could create a virtual machine with its own set of users, applications and resources attached to it.  You could even mix and match hardware to requirements. E.g. You have a process that doesn't leverage multi-core/multi-CPU hardware - no problem just create a virtual machine with a single core and leave the rest available to other virtual machines.
 
-Problem: We have all these virtual machines and their consuming all these resources but most of the time the resources are under used? (sound familiar?)
+In the context of renting computing resources (or charging departments for their resouce usage) this mix and match approach can be really compelling.
 
-Solution: containers
+Eventually though you wind up over provisioning your virtual machine at some level.
+
 
 ## Containers provide a smaller/lighter unit of organization
+
+Problem: All these virtual machines and their consuming all these resources but most of the time the resources allocated to the virtual machine are under used? (familair problem)
+
+Solution: containers
 
 Back when VM (Virtual Machines) became popular their was another approach. Process and resource Isolation in via something called chroot and eventually reconceived as "containers".  This was pioneered as a comercial product by Sun Microsystem in their Zones and Containers.  When Sun died the idea didn't go away. The Linux community picked up some of the same ideas and created something called cgroups. The opperating system can present a clean slate of resources to a container as if it owned the whole machine. It can do this over and over with multiple containers until all resources are used up (in which case you migrate your containers to another VM or physical hardware device).  
 
 The abstraction of the container is lighter weight then a virtual machine because it can re-use the host operating system with still achieving a large degree of resource isolation.  E.g. you need to run a system that calls for Apache 2, PHP 5.4 and other service that calls for Apache 2 but must have PHP 5.6. You could use the same machine but run them in separate containers without one interfering with another since each container believes it has the whole machine (I am simplifying here for brevity).
+
 
 ### What does this mean for a central IT group or a Web Services unit?
 
@@ -55,7 +67,9 @@ Container management is the big area of sorting out with Kubernetes from Google 
 
 ## Links
 
++ Apache Mesos [Program against your datacenter like it's a single pool of resources](http://mesos.apache.org/)
 + [Co-Existence of Containers and Virtualization Technologies](http://redhatstackblog.redhat.com/2014/11/20/co-existence-of-containers-and-virtualization-technologies/)
++ [Why Containers Instead of Hypervisors](http://blog.smartbear.com/web-monitoring/why-containers-instead-of-hypervisors/)
 + [What is docker and why is it so darn popular](http://www.zdnet.com/article/what-is-docker-and-why-is-it-so-darn-popular/)
 + [Operating-system-level virtualization](http://en.wikipedia.org/wiki/Operating-system-level_virtualization)
 + [Hardware virtualization](http://en.wikipedia.org/wiki/Hardware_virtualization)
