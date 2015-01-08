@@ -1,6 +1,15 @@
 
 # Containers and virtualization
 
+## So what is Docker?
+
+Docker is a popular containerization open source project that has seen significant adoption by a large number of major players in the cloud (e.g. Google, Amazon, Microsoft Azure).  Containerizastion would allow a web services group to develop with platform choices driven by their application needs rather than what Solaris/RedHat Enterprise is offered by a central IT group.
+
+If the central IT group supported Dockere containers individual departments could still utilize their resource but use the technologies that made the most sense for their applications (e.g. a Ruby Group or NodeJS group could be supported on the same infrastructure as the centralally maintained LAMP stack).
+
+
+## Background
+
 Problem: How do we meet peak usage demand?
 
 Historically you did two things
@@ -50,4 +59,4 @@ Links:
 + [Hardware virtualization](http://en.wikipedia.org/wiki/Hardware_virtualization)
 + [Docker](https://www.docker.com/)
 + [Kubernetes](http://kubernetes.io/news/)
-
++ [8 Questions You Need to Ask About Microservices, Containers & Docker in 2015](http://blog.xebialabs.com/2014/12/31/8-questions-need-ask-microservices-containers-docker-2015/)
