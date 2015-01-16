@@ -3,12 +3,14 @@
 
 ## An internet history lesson through exploring protocols
 
-The internet started as a network of networks.  It important that
-the computers on the individual networks beable to communicate relaiable
-among themselves as well as external networks which might be implemented
-with very different assumptions. These interactions are governed by
+The internet is a network of networks.  It is important that
+the computers can communicate reliably among themselves as well as 
+across external networks. Today we take this for granted.  In the past
+it was a challenge.
+
+The successful communication between computers are governed by
 [protocols](http://en.wikipedia.org/wiki/Internet_Protocol) or more formally
-internet protocols..
+internet protocols...
 
 
 ## What is a protocol?
