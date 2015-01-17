@@ -29,11 +29,12 @@ this definition--
 
 ## Why is this important?
 
-If your vocation involves the world wide web your is made possible because of protocols.
-Protocols are the foundation block. If your web browser is analogous to a car then
-the protocols are the road. More more accurately how the road should be constructed
-and function so that you can safely drive your car among other cars.  If you are building 
-on the web (either code or content) you can leverage your basic understanding of 
+If your vocation involves the world wide web your vocation is made possible 
+because of protocols.  Protocols are the foundation block the web is built on. 
+If your web browser is analogous to a car then the protocols are the road. 
+Or more accurately how the road should be constructed and function so that you 
+can safely drive your car among other cars.  If you are working 
+on the web (code or content) you can leverage your basic understanding of 
 protocols to avoid problems down the road.
 
 Another way of looking at it is using a building analogy. The foundation is the protocol
@@ -44,23 +45,25 @@ structurally compromised.
 Willful ingornance of internet and web protocols by those who build on the web raises 
 the risks of structual compromise of our websites and applications. Compromise can hurt others.
 
+The trouble with protocols is that when they are working correctly you barely notice them.
+
 
 ## Import protocols January 2015
 
-Below is a shortlist of protocols used today in the workings of internet, websites 
+Below is a shortlist of protocols used today by networks, websites 
 and applications. This list is in semi-historical order.
 
-+ tcp/ip and udp/ip
-+ ftp and telnet
-+ http
-+ ssl, sftp and ssh
-+ http/https 1
-+ spdy
-+ http/https 2
-+ webrtc
++ TCP/IP and UDP/IP
++ FTP and Telnet
++ HTTP
++ SSL/TLS
++ SFTP, SSH and HTTPS
++ SPDY
++ HTTP/2
++ WebRTC
 
 
-### TCP/IP and UDP/IP
+## TCP/IP and UDP/IP
 
 TCP/IP is a grandfather protocol for the internet and dates back before the world wide web.  It was created to allow computer networks to communicate amamonth themselvse.  As networking took off in the late 1970s there were many types of network and all were exclusive to themselves for the most part. Inevitably these networks needed to be bridged together so they could share resources, code, data and plain old text communications. Enter DARPA. Confronting the threat of gobal nuclear war was a priority of defense researchers from WWII through recent decades.  One primise was that a nuclear holicost would have survivers and there for would need to re-group and keep things going.  A basic war tactict is to destroy the ememy command and control structures and this mean both audio/visual communication and in the 1970s increasingly computer communications.  The U.S. Federal Government through DARPA funded the creation of a network of networks which could survive breakage and disruption.  This resulted in a research network called DARPA Net and that became in internet.
 
@@ -141,7 +144,7 @@ When HTTPS was first introduced is required more processing power from the machi
 
 A few years ago Google Inc. realized that HTTP/HTTPS traffic used allot of bandwidth. Allot of this was probably not necessary given the evolution of what was sent and received over the net.  They wanted to iprome this situation (it would save them cache and resources) and they proposed SPDY. SPDY is a name tradmarked by Google though they have evolving the protocol as an open standard.  Currently SPDY is at version 3. Firefox, Chrome, Opera, Safari and IE all support it. It has formed a test bed for our next protocol. SPDY is not so much a replacement for HTTP but an extension of it.
 
-## HTTP 2
+## HTTP/2
 
 As content usage and applications on the web have changed the original HTTP protocol is beginning to be long in the tooth.  With the success of alternatives like SPDY the web server and browser makers are getting ready for an update. Over the next few years we will see a shift in support and adoption. There is precidence for this. SSH went through a version 1 to 2 transition a few years back.  If we are building new web servers and services we should support SPDY version 3.1 today and plan to support [HTTP/2](http://en.wikipedia.org/wiki/HTTP/2) as RFC process moves on.
 
