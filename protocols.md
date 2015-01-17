@@ -27,57 +27,90 @@ this definition--
 	between computers.
 
 
-## Why is this important?
+### Why is this important?
 
 If your vocation involves the world wide web your vocation is made possible 
-because of protocols.  Protocols are the foundation block the web is built on. 
-If your web browser is analogous to a car then the protocols are the road. 
-Or more accurately how the road should be constructed and function so that you 
-can safely drive your car among other cars.  If you are working 
-on the web (code or content) you can leverage your basic understanding of 
-protocols to avoid problems down the road.
+because of protocols.  Protocols are the foundation the web is 
+built on so I will use a building analogy to discribe of importance. The 
+foundation is required but what you put on top if it is 
+what most people notice (e.g. house, office building, park).
+If a building rests a broken foundation it will become 
+structurally compromised.  The trouble with protocols is that when they are working 
+correctly you barely notice them.  Just like the foundation.
 
-Another way of looking at it is using a building analogy. The foundation is the protocol
-what you put on top if it is what most poeple notice (e.g. house, office building, park).
-If a building rests beyond its foundation or has a broken foundation it will become
-structurally compromised. 
 
-Willful ingornance of internet and web protocols by those who build on the web raises 
-the risks of structual compromise of our websites and applications. Compromise can hurt others.
+Let me explore human protocols. When humans communicate verbally we form sounds into words, 
+words into pharses, phrases into sentenses. Generally one person speaks then another. Sometimes 
+two people speak at the same times overlapping.  Most of the time the conversation will still be understood 
+by both parties. We also can let the other person know when something was confusing. That informal 
+processs is an information protocol.  The whole could be described by 
 
-The trouble with protocols is that when they are working correctly you barely notice them.
+1) having an idea
+2) translating the idea into a sequence of words
+3) speak them 
+4) hearing sounds in response
+5) recognizing words
+6) interpreting the sequence of words into meaningful ideas
+7) drawing a conclusion based on the words processed
 
+If we are worried about being overheard we might try to obscure communication by volume or more cleverly by
+speaking in a coded manner.
+
+Verbal communication can be extended over distances through putting the words on paper, those pages becoming
+letters and having other people, couriers, transport the letters to their destination.  Besides the letter delivery
+the courier carries extra information like destintation, whether or not a reply is expected (and to wait for it). 
+The courier might even describe reactions back to the sending party. The extra bit of information is called
+metadata (data about data) and is important because as we evolve from couriers, to postal systems to telegraphs
+and telephones and finally to digital computer networks we keep applying a process that looks allot like the
+seven steps along with metadata to make thing sall work. Collectively the steps and metadata structure form the protocol.
 
 ## Import protocols January 2015
 
 Below is a shortlist of protocols used today by networks, websites 
 and applications. This list is in semi-historical order.
 
-+ TCP/IP and UDP/IP
-+ FTP and Telnet
-+ HTTP
-+ SSL/TLS
-+ SFTP, SSH and HTTPS
-+ SPDY
-+ HTTP/2
-+ WebRTC
++ Part one
+	+ TCP/IP and UDP/IP
+	+ FTP and Telnet
+	+ HTTP
++ Part Two
+	+ SSL/TLS
+	+ SFTP, SSH and HTTPS
+	+ SPDY
+	+ HTTP/2
+	+ WebRTC
 
 
 ## TCP/IP and UDP/IP
 
-TCP/IP is a grandfather protocol for the internet and dates back before the world wide web.  It was created to allow computer networks to communicate amamonth themselvse.  As networking took off in the late 1970s there were many types of network and all were exclusive to themselves for the most part. Inevitably these networks needed to be bridged together so they could share resources, code, data and plain old text communications. Enter DARPA. Confronting the threat of gobal nuclear war was a priority of defense researchers from WWII through recent decades.  One primise was that a nuclear holicost would have survivers and there for would need to re-group and keep things going.  A basic war tactict is to destroy the ememy command and control structures and this mean both audio/visual communication and in the 1970s increasingly computer communications.  The U.S. Federal Government through DARPA funded the creation of a network of networks which could survive breakage and disruption.  This resulted in a research network called DARPA Net and that became in internet.
+TCP/IP is a grandfather protocol and pre-dates the Internet and the world wide web.  
+It was created to allow computer networks to communicate among themselves.  As 
+computer networking took off in the late 1970 there were many types of network. Most 
+were proprietry and only coud communicate with like networks. Inevitably these networks 
+needed to be bridged together. The need was driven the desire to share hardware 
+resources and data. Enter DARPA a coldwar agency charged with antipating threats and planning 
+responses.  A basic war tactic is to destroy the ememy command and control structures. 
+Thus An area of research has how to make those structures survive conflict. In the 1950s 
+the focus was on analog (e.g. audio) communication and by the 1970s it was digital computer 
+networks.  The U.S. Federal Government through DARPA funded the creation of a network of 
+networks which could survive breakage and disruption of a nuclear assault.  The resulting 
+research network called ARPANET. TCP/IP comes from ARPANET which evolved into the Internet.
 
-The TCP protocol formed the foundation of the early internet and remains critical today.  TCP stands for Tramission Control Protocol. When humans communication verbally we form sounds into words, words into pharses, phrases into sentenses, etc.  Sometimes two people speak at the same times often overlapping.  Most of the time the conversation will still be understood by both parties and normally we have social convension to help us avoid confusing overlap.  TCP defines the basic elements used to successfully communication with other computers who also known TCP. Software in the computers breaks what the human wants to send down into data grams. These are sent across the network of networks to the destination and then are re-assembled at the other end. An important feature of TCP is that is manages to keep those packets ordered even when some paths across the network might be conguested or unresponsive. This means if I type "Hello World" into a chat program at work chatting with my friend in another place it still comes out "Hello World" on the otherside.
+The TCP protocol forms foundation of Internet and web today. TCP stands for _Transmission Control Protocol_. 
+But what is it? 
 
-TCP was optimized for send streams of information, often textual, between computers. It supports interactive communications.  It along with UDP is the foundation other internet and web protocols are often built on. These includeHTTP/HTTPS (web protocol), SMTP/POP3/IMP (email protocols), and SSH/SFTP.
 
-ANother important grandfather protocol is UDP - User Datagram Protocol.  It dates from the 1980s. It is used when TCP is considered to "heavey weight" to be practical.  UDP achieves this slimming down by having few guarantees about order and successful transmission. It is particularly useful when delay in communications is more harmful than delivery and order.  Many "real time" protocols build on UDP.  An example would be early voice communications, event log streaming. Like TCP UDP is built on by other protocols.
+TCP defines the basic elements used to successfully communicate between computers over an IP network. Software referred to as the TCP/IP stack breaks down the data to communicate between computers into smaller chunks which in turn are assembled into data grams and packets. These packats travel through the network (over wire, fiber or wireless spectrum) then get assembled again at the other end.  This includes the data the computer is trying to communicate plus the necessary information to help it arrive at the final destination.  An important feature of TCP is that is manages to keep those packets ordered even when some paths across the network might be conguested or unresponsive. This means if I type "Hello World" into a chat program at work chatting with my friend in another place it still comes out "Hello World" on the otherside and not "WorldHe llo".
 
-Both are important to web in that they provide the foundation to build on.
+TCP was optimized for send streams of information, usually text, between computers. It supports interactive communications.  Another important grandfather protocol is UDP - User Datagram Protocol.  It dates from the 1980s. It is used when TCP is considered too heavey to be practical.  UDP achieves this slimming down by dropping some of the guarantees that TCP insists on. This includes assertions about order and confirmation about successful transmission. UDP is particularly useful when delay in communications is more harmful than a missed or corrupted delivery.  Many _real time_ protocols build on UDP. An example would be early voice communications, event log streaming. 
+
 
 ### FTP and TELNET
 
-Before the world wide web one and before the internet moving data from computer system in one site to another often involved copying information to tap and physically send the tap to another location (e.g. via the Post office). When computing sites started being network together an early usecase was sending data from one system to anther.  By the seconds there was a common concept for organizing data. It was called a file. A file was analogous to your paper file you might find in a filing cabinet at your place of business. When DARPA network was create different methods were used to moving these files between systems.  Eventually it became desirable to replicate the filing cabinet as well as the file concept. The trouble was differing computer systems interally organized things very differently. With the popularity of the Unix style filesystems a common approach was created and the protocol describing how to map that organization was also create - FTP - File Transfer Protocol.  FTP allowed one computer network to present a common file system to antoher computer network and coordinate the delivery and management of file between them.
+Before the world wide web and before the internet moving data from computer site to another often involved copying information to tap and physically sending the tap to another location (e.g. via the Post office). When computing sites started being network together an early use case was sending data from one system to another over the network.  The common data unit was a file.
+By the seconds there was a common concept for organizing data. It was called a file. A file was analogous to your paper file you might find in a filing cabinet at your place of business. When DARPA network was create different methods were used to moving these files between systems.  Eventually it became desirable to replicate the filing cabinet as well as the file concept. The trouble was differing computer systems interally organized things very differently. With the popularity of the Unix style filesystems a common approach was created and the protocol describing how to map that organization was also create - FTP - File Transfer Protocol.  FTP allowed one computer network to present a common file system to antoher computer network and coordinate the delivery and management of file between them.
+.
+
 
 Besides accessing files often times users of one computer system would want to access and run process on another system on the work. Again various approaches were taken but eventually Telnet protocol was evolved to allow for interactive control. This was particilarly advantaguous with the arrival of time sharing system (i.e. multi-user computer systems).  
 
