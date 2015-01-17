@@ -9,8 +9,9 @@ across external networks. Today we take this for granted.  In the past
 it was a challenge.
 
 The successful communication between computers are governed by
-[protocols](http://en.wikipedia.org/wiki/Internet_Protocol) or more formally
-internet protocols...
+[protocols](http://en.wikipedia.org/wiki/Internet_Protocol). In the article
+I am address a few specific protocols that collectively are known
+as IP or Internet Protocols.
 
 
 ## What is a protocol?
@@ -19,9 +20,8 @@ A protocol is an agreed upon manner of transaction (e.g. communicaition)
 between two entities.  Before computers protocols referred to the rules
 of interaction in political bodies (e.g. a royal court) and between nations.
 
-Today that term finds itself tied to computers and specifically to computer 
-networks.  For the purposes of this document I am using
-this definition--
+Today the term finds itself tied to computers and computer networks.  
+In that context I am using this deffinition--
 
 	A protocol is the agreed upon method of exchanging information 
 	between computers.
@@ -31,43 +31,58 @@ this definition--
 
 If your vocation involves the world wide web your vocation is made possible 
 because of protocols.  Protocols are the foundation the web is 
-built on so I will use a building analogy to discribe of importance. The 
-foundation is required but what you put on top if it is 
+built. I will use a building analogy to discribe of importance. A 
+foundation is required by what you build on top of it. It provides the 
+platform and stability to work. Importantly what you put on top if it is 
 what most people notice (e.g. house, office building, park).
 If a building rests a broken foundation it will become 
-structurally compromised.  The trouble with protocols is that when they are working 
-correctly you barely notice them.  Just like the foundation.
+structurally compromised. If you build a building without respecting its 
+foundation it can be structurally compromised. Understanding the foundation 
+helps you build a build that avoids compromise. On the web humans interact
+with webpages.  The think of the web through the lense of pages and web applications.
+But what those stand on it a set of protocols.  Abusing the protocols will problems
+for the site, application or web browser.
 
+### Are protocols for computers are complicated?
 
-Let me explore human protocols. When humans communicate verbally we form sounds into words, 
+Let me explore human protocols first. When humans communicate verbally we form sounds into words, 
 words into pharses, phrases into sentenses. Generally one person speaks then another. Sometimes 
 two people speak at the same times overlapping.  Most of the time the conversation will still be understood 
-by both parties. We also can let the other person know when something was confusing. That informal 
-processs is an information protocol.  The whole could be described by 
+by both parties. We also can let the other person know when something was confusing or spoke over us. 
+That informal processs is a verbal information protocol.  We can breakdown the process
+a but more by looking at what happens for one of the people talking and then listening.
 
-1) having an idea
-2) translating the idea into a sequence of words
-3) speak them 
-4) hearing sounds in response
-5) recognizing words
-6) interpreting the sequence of words into meaningful ideas
-7) drawing a conclusion based on the words processed
+1) I having an idea
+2) My brain translates the idea into a sequence of words
+3) I speak them and wait for a response
+4) You hearing sounds 
+5) You process those sounds into a sequence of words
+6) You interpret the sequence into a meaningful idea(s)
+7) You think of an idea to response with
+8) Your brain translates the idea into a sequence of words
+9) You speak the words and I precieve it as a response
 
-If we are worried about being overheard we might try to obscure communication by volume or more cleverly by
-speaking in a coded manner.
+We can have several protocols applied here. There is the use of a common human language. We agree
+mostly on what are words and generally what they mean. We have a call and response protocol so that
+we minimize confusion and have time (a small time) to think between all the computational work
+of create language structures, speaking them and decoding them. This standard is a protocol.
 
-Verbal communication can be extended over distances through putting the words on paper, those pages becoming
-letters and having other people, couriers, transport the letters to their destination.  Besides the letter delivery
-the courier carries extra information like destintation, whether or not a reply is expected (and to wait for it). 
-The courier might even describe reactions back to the sending party. The extra bit of information is called
-metadata (data about data) and is important because as we evolve from couriers, to postal systems to telegraphs
-and telephones and finally to digital computer networks we keep applying a process that looks allot like the
-seven steps along with metadata to make thing sall work. Collectively the steps and metadata structure form the protocol.
+Protocol is just sorted out structure. With computers we need to be very specific because computers
+and the network hardware they rely on are very literal and tolerate ambiguity poorly.
 
-## Import protocols January 2015
+Protocols can stack one on top of anther, used in parallel and used exclusively depending on their
+nature.  In computer technology we see protocol evolve, often with version numbers to identify
+expectations.  Often a lower level protocol (e.g. forming a sequence of sounds into a work) is abstracted
+by higher level protocols (e.g. using words to form sentences, sentence to form paragraphs).  
 
-Below is a shortlist of protocols used today by networks, websites 
-and applications. This list is in semi-historical order.
+In our work web protocols are built on internet protocols which are built on lower level network protocols
+eventually drilling down to the hardware expectations that the electrons travel through.
+
+
+# Important protocols January 2015
+
+Below is a shortlist of protocols used today by Internet and Web.
+In semi-historical order--
 
 + Part one
 	+ TCP/IP and UDP/IP
@@ -78,122 +93,152 @@ and applications. This list is in semi-historical order.
 	+ SFTP, SSH and HTTPS
 	+ SPDY
 	+ HTTP/2
-	+ WebRTC
+	+ DTLS/SRPT and WebRTC
 
 
 ## TCP/IP and UDP/IP
 
-TCP/IP is a grandfather protocol and pre-dates the Internet and the world wide web.  
-It was created to allow computer networks to communicate among themselves.  As 
-computer networking took off in the late 1970 there were many types of network. Most 
-were proprietry and only coud communicate with like networks. Inevitably these networks 
-needed to be bridged together. The need was driven the desire to share hardware 
-resources and data. Enter DARPA a coldwar agency charged with antipating threats and planning 
-responses.  A basic war tactic is to destroy the ememy command and control structures. 
-Thus An area of research has how to make those structures survive conflict. In the 1950s 
-the focus was on analog (e.g. audio) communication and by the 1970s it was digital computer 
-networks.  The U.S. Federal Government through DARPA funded the creation of a network of 
-networks which could survive breakage and disruption of a nuclear assault.  The resulting 
-research network called ARPANET. TCP/IP comes from ARPANET which evolved into the Internet.
+TCP/IP is a grandfather protocol and pre-dates the Internet and Web.  
+It was created to allow computer networks to communicate among themselves.  In 
+the late 1960s there were many types of network. Most were proprietry and only coud communicate 
+with like networks. Inevitably these networks needed to be bridged together. The need was driven the 
+desire to share hardware resources and data. DARPA a coldwar era federal agency charged with 
+antipating threats and planning responses commissioned research in this area. It was responding
+to a basic war tactic of disruption and destroying ememy command and control structures.  
+Your own command and control structures need to survive conflict. DARPA funded ARPANET
+as a means of researching solutions to this problem.  TCP/IP comes from ARPANET 
+which is the parent of the Internet and grandparent of the Web.
 
-The TCP protocol forms foundation of Internet and web today. TCP stands for _Transmission Control Protocol_. 
-But what is it? 
+TCP stands for _Transmission Control Protocol_.  But what is it? 
 
 
 TCP defines the basic elements used to successfully communicate between computers over an IP network. Software referred to as the TCP/IP stack breaks down the data to communicate between computers into smaller chunks which in turn are assembled into data grams and packets. These packats travel through the network (over wire, fiber or wireless spectrum) then get assembled again at the other end.  This includes the data the computer is trying to communicate plus the necessary information to help it arrive at the final destination.  An important feature of TCP is that is manages to keep those packets ordered even when some paths across the network might be conguested or unresponsive. This means if I type "Hello World" into a chat program at work chatting with my friend in another place it still comes out "Hello World" on the otherside and not "WorldHe llo".
 
-TCP was optimized for send streams of information, usually text, between computers. It supports interactive communications.  Another important grandfather protocol is UDP - User Datagram Protocol.  It dates from the 1980s. It is used when TCP is considered too heavey to be practical.  UDP achieves this slimming down by dropping some of the guarantees that TCP insists on. This includes assertions about order and confirmation about successful transmission. UDP is particularly useful when delay in communications is more harmful than a missed or corrupted delivery.  Many _real time_ protocols build on UDP. An example would be early voice communications, event log streaming. 
+TCP was optimized for send streams of information, usually text, between computers. It supports interactive communications.
+
+Another important grandfather protocol is UDP - User Datagram Protocol.  It dates from the 1980s. It is used when TCP is considered too heavey to be practical.  UDP achieves this slimming down by dropping some of the guarantees that TCP insists on. This includes assertions about order and confirmation about successful transmission. UDP is particularly useful when delay in communications is more harmful than a missed or corrupted delivery.  Many _real time_ protocols build on UDP. An example would be early voice communications, event log streaming. 
 
 
-### FTP and TELNET
+### FTP and Telnet
 
-Before the world wide web and before the internet moving data from computer site to another often involved copying information to tap and physically sending the tap to another location (e.g. via the Post office). When computing sites started being network together an early use case was sending data from one system to another over the network.  The common data unit was a file.
-By the seconds there was a common concept for organizing data. It was called a file. A file was analogous to your paper file you might find in a filing cabinet at your place of business. When DARPA network was create different methods were used to moving these files between systems.  Eventually it became desirable to replicate the filing cabinet as well as the file concept. The trouble was differing computer systems interally organized things very differently. With the popularity of the Unix style filesystems a common approach was created and the protocol describing how to map that organization was also create - FTP - File Transfer Protocol.  FTP allowed one computer network to present a common file system to antoher computer network and coordinate the delivery and management of file between them.
-.
+Sending TCP or UDP data packets between computers is not an end in itself.  People want to do things with
+computers.  Two protocols built on top of TCP/IP and UDP/IP are FTP and Telnet.  Before the Web 
+and Internet moving data from computer site to another often involved copying information to tape and 
+physically sending the tape to another location (e.g. via the Post office). When computing sites started 
+being network together an early use case was sending data from one system to another over the network.  
+The common data unit was a file. The need to making it easier to consistently send, receive and manage files 
+across different computers spawned the creation of FTP - File Transfer Protocl. The Unix command that
+provided a means to use the protocol also bares the same name. Likewise accessing and controlling a
+remote computer over a TCP/IP spawned Telnet which refers to both an protocol and Unix command.
 
+Often protocols start out as a explicit reflection on a specific software application. Over time though
+the protocol can be used by other applications for other purposes generalizing its application.
 
-Besides accessing files often times users of one computer system would want to access and run process on another system on the work. Again various approaches were taken but eventually Telnet protocol was evolved to allow for interactive control. This was particilarly advantaguous with the arrival of time sharing system (i.e. multi-user computer systems).  
+Telnet provided by directional communications between computers and was designed for interactive computing
+(e.g. I type in a command and it gets run on the remote computer with its output visit on my screen).  FTP
+was focused on file management and access.  The normal workflow on the remote system was generally limited
+to creating a file, renaming a file, sending and receiving a file. Eventually additional functionality was
+added like listing the available files; creating, deleting, renaming directories of files.
 
-By the time DARPAnet was evolving into the Internet the problem of eavesdropping had reared its head. Both FTP and Telnet communicated between computers using plain text.  If you could access the network hardware or memory on the receiving computer you could watch what was exchanged and make a copy of it easily. This was like party lines in the early telephone system.  There needed to be a more secure way for these systems to communicate and that lead to - SSL, SFTP and SSH.
+When FTP and Telnet were first created they were used on closed networks. As a result the primary risk of
+compromised assumed physical access to the network hardware or computers on that network. All transactions
+using either protocol were visible in plain text.  When the Internet arrived the assumption of a 
+friendly network had to change.
 
-It is important to note that the world wide web was invented before the more secure forms existed.  The world wide web leveraged TCL/IP and sat between FTP (a file system view of content) and Telnet (an interactive view of a computer system).  Like Telnet and FTP the first version of the web protocol, HTTP, transfered data "in the clear" meaning anyone could internet it.
 
 ## HTTP
 
-HTTP stands for Hypertext Transfer Protocol. It coordinates the transmition of text, images, and even video across networks. It is used by servers who store and distribute content as well as web browser and mobile applications that receive the content. It is the enabling protocol of the world wide web.
+HTTP stands for Hypertext Transfer Protocol. It coordinates the transmition of text, images, and even video across networks. It is used by servers who store and distribute content as well as web browser and mobile applications that receive the content. It is the enabling protocol of the Web. HTTP protocol supports a few _verbs_ for interacting
+with content.  Unlike FTP that content does not have to be a file it could the output of a program (e.g. a web service) but often it is a file. Along with a few verbs HTTP also supports metadata about the item being
+requested or sent. This metadata includes things like size, file type. It can also include things like
+authorization tokens, browser state (e.g. cookies).  It is quiet flexible.  The common verbs of HTTP are GET, POST,
+PUT, DELETE, HEAD. Each services a purpose. One of the clever applications of these verbs is REST - Representational State Transfer which allows a database like mapping of actions - create, read, update and delete by mapping
+to POST, GET, PUT and DELETE along with other metadata provided in the HTTP Header.
 
-In its original form transmission was in text format only. If you had an image or other binary file you wanted to transfer you encoded into text. To let the receiving system know how to interpet the document a preamble called an _HTTP Header_ was attached to the encoded text. Likewise the requesting system (e.g web browser) used HTTP Headers to tell the content system what types of formats it can read.  Over timeHTTP header elements have grown facilitating a high level of control over HTTP communications.
+HTTP is an asyncronous protocol unlike Telnet.  By clever use of the HTTP Headers we can build a interaction
+which is syncronous and this experience is what we see in web applications like GMail or buying something at Amazon.
+
+When the web started supporting more sensitive transctions (e.g. transporting private communications, 
+on-line purchased) HTTP revealed a problem. Like FTP and Telnet before it all the transaction over the network
+took place in plain text and could be eavesdroped very easily.
 
 
 ## A pause for context
 
 There are several imporant influences on the net when Tim Berners-Lee dreams up the world wide web in CERN.
 
-1) The internet has expanded from a few institutions to a global collection of networks and systems (there are internet accessible sites in America, Europe and Asia).
-2) The internet has shifted from part-time connection to full-time connections (see the story of UUCP - Unix to Unix communication protocol)
-3) The interactive internet started straining to move beyond plain text to more immersive content including images, diagrams eventually video.
-4) With faster and full time connctions new human organizations were possible (e.g. a change of software development models from restrictive and tap exchange based to the open model assumed by Linus Torvolds and the spread of Linux)
-5) With the arrival of the web the number of participants and the barriers to entry dropped.
+1) The Internet expanded from a few institutions to a global collection of networks and systems (there were Internet accessible sites in America, Europe and Asia).
+2) The Internet has shifted from part-time connection to full-time connections (e.g. creation and decline in usage of [UUCP](http://en.wikipedia.org/wiki/UUCP))
+3) The interactive Internet move beyond plain text to more immersive content including images, diagrams eventually video.
+4) With faster full time connctions new human organizations were possible (e.g. software development models moved from isolate shops who exchanges tapes to the open model assumed by Linus Torvolds and the spread of Linux)
+5) With the arrival of the Web the number of participants rapidally increased as barriers to entry dropped.
 
-#5 is important. The assumed trust did not prove reliable. Mischief changed from traditional April 1st jokes to things more serious. Before DARPANet it often was necessary to gain physical access to a system to compromise it. By the arrival of the internet that was not the case.
+#5 is important. The assumed trust did not prove reliable. Mischief changed from traditional April 1st jokes to things more serious. Before DARPANet it often was necessary to gain physical access to a system to compromise it. By the arrival of the Internet that was not the case.
 
 
 ## A pause for implications
 
-* When you convert binary content into text the data being transfer tends to grow larger. This lead to compression (strinking the text back down) binary content transfer support.  
+* When you convert binary content into text the data being transfer tends to grow larger. This lead to compression (strinking the text back down) and selective binary content transfer support.  
 * Some content changes frequently other rarely. HTTP Headers have evolved to help manage the difference
 * HTTP was created as a asynchronous protocol but humans like systems that are synchronous (i.e. context it carried between transactions), HTTP Headers have been used to help create context between asynchronous requests
-* [Ajax techniques](ihttp://en.wikipedia.org/wiki/Ajax_(programming)) are limited by basic fundimentals of TCP/IP and HTTP
+* [Ajax techniques](ihttp://en.wikipedia.org/wiki/Ajax_(programming)) are limited by basic fundimentals of TCP/IP and HTTP it is "heavy" in the same way that TCP/IP is "heavy" compared to UDP/IP, new protocols and APIs like WebSockets have evolved to replace Ajax transactions.
 * HTTP Headers can also become large so alternative protocols are evolving to manage that
 * A web page today is likely more than one document
 	* Each (sub)document goes through a request process (even if it is only a header exchange) 
 	* Each document request eats up network connections and take time. 
 	* A major challenge today is wrangle the web page such that there is a balance in the number of requets, size of documents and round trip connection time need to assemble the final view.
-* In 1989 you were lucky to find 100 people looking at your website, today it is reasonable to assume you have suppport tens of thousands of symultaneious requests. This known as the [C10K](http://www.kegel.com/c10k.html) problem. The term was coined by Dan Kregal in 1999. Even in 2015 I find it challenging to get my colleagues to appreciate the implications of this when building websites. 
+* In 1989 you were lucky to find 100 people looking at your website, today it is reasonable to assume you have suppport thousands and even tens of thousands of symultaneious requests. This is known as the [C10K](http://www.kegel.com/c10k.html) problem. The term was coined by Dan Kregal in 1999. Even in 2015 I find it challenging to get my colleagues to appreciate the implications of this when building websites. 
 
-Part of the C10K problem is hidden by how we view the web today. We view the web through the lense of webpages. Humans tend to view a webpage is one document because that is how we experience it. That turns out to rarely be the case today.  A poorly designed webpage can range turn into a request for hundreds of documents. This easier to see when you consider that a webpage often has many image files, CSS files (describing layout), JavaScript files (containing behaviors). The latter two can in turn may request more files. Send this all down a slow and conguested celluar data network and you a very unpleasnt experience both sides of the connection for humans and computers.
+Part of the C10K problem is hidden by how we view the web today. We view the web through the lense of webpages. Humans tend to view a webpage as one document because that is how we experience it. That turns out to rarely be the case today.  A poorly designed webpage can range turn into a request for hundreds of documents. This easier to see when you consider that a webpage often has many image files, CSS files (describing layout), JavaScript files (containing behaviors). The latter two can in turn request more files. Send this down a slow and conguested celluar data network and you a very unpleasnt and frustratine experience.
 
 
 ## SSL, TLS, SFTP and SSH
 
-Headlines today show us that information can be weaponized.  Say you are looking at recipes for dinner. Also assume I know you last visited the grocery store a week ago.  If you linger I can bet you are concidering the prepration this gives me the inuition that 1) you will go to the grocery store or call for delivery and 2) you will prepare some food. Depending the recipe I might beable to determine if you are cooking for one or a whole crowd (e.g. Christmas Goose).  If I wish to burgle your house I can make plans.Moral never look at recipes :-).
+So FTP, Telnet and HTTP started out as clear text protocols with a problem of eavesdropping. How do we address
+that? Why create some more protocols of course.  When to humans communication over a distance in written form
+and want to prevent eavesdropping they can write their messages in code. That is also what we can do with
+computer protocols. The specifics for how you wrap your clear text in encryption is addressed by the SSL protocol.
 
-That example is contrived to make the point. Something socially safe as food can be used to tell me something about you personally. That makes the world a little creepy. Maybe there is a safer way to move about on the internet and web.
+SSL stands for secure sockets layer.  The basic idea is to combine encryption the information before it is broken into TCP/IP or UDP/IP packets. Since FTP, Telnet and HTTP are build on TCP/IP and SSL privides a mechanism for wrapping those protocols in encryption. Doing allows us to make a safe FTP now called SFTP, a safer HTTP called HTTPS. Telenet itself was superceded by SSH which provided a secure means of accomplishing the same goals.
 
-Commonly (at least since Greek/Roman times) keeping messages safe in transit has involved cyphers and codes. You take your message and encrypt it so it is secret and the recepient on the other end decrypts it so they understand the contents.  Computers were actually developed to break these codes - [Blechtey Park](http://www.bletchleypark.org.uk/) is famous for this. Naturally computers and networks can take advantage of encryption and that leads to the next batch of protols.
+Unfortunately SSL proved to be breakable. It has largely been replaced by [TLS](http://en.wikipedia.org/wiki/Transport_Layer_Security) - Transport Layer Security. If you are talking with someone about computer security they tend to be specific about the transport security layer and they will make a distinction between SSL and TLS. If you are talking with someone causally often people will say SSL when they really mean TLS. To muddy the waters some there are programming libraries that use SSL in their method names when they actually implement TLS. The bottom line is you want to use TLS. It is the standard today for encrypting the channels of communicaiton. One of Fall 2014 big security issues was that many websites and services had not upgraded to TLS support.  Do to the high profile compromises
+many organizations had to scramble to switch all their systems and services to use the newer more secure TLS.
 
-SSL stands for secure sockets layer.  The basic idea is to combine encryption with a protocol like TCP/IP. Use TCP/IP to make sure your data gets to here you want and encrypt inside of that data so the content is hard to reveal. Someone who can monitor the network traffic can see where the encrypted packets come from and where they go but would have to break the encryption (something that is possible given sufficient time and computation resources) to know what is inside. Three portocols we introduced earlier were improved by this - FTP became SFTP, Telnet was replaced by SSH and HTTP gained a brother called HTTPS.
+Current versions of most web browsers, SFTP, SSH and HTTPS today uses TLS. 
 
-The trouble of encryption is that it can be broken. SSL proved to be breakable and has largely been replaced by [TLS](http://en.wikipedia.org/wiki/Transport_Layer_Security) - Transport Layer Security. If you are talking with someone about computer security they tend to bea specific meaning and will say TLS. If you are talking with someone causally often people will say SSL when they really mean TLS. To muddy the waters some there are programming libraries that use SSL in their method names when they actually implement TLS. The bottom line is you want to use TLS. It is the standard today for encrypting the channels of communicaiton.
-
-Current versions of SFTP, SSH and HTTPS today uses TLS. SFTP is our friendly file transfer protocol and is still used to move files between systems. There is also command called _scp_ which stands for secure copy and it can be executed from the command line of most Unix systems (e.g. Terminal on a Mac). SSH
-has replaced Telnet. SSH stands for secure shell. It provides a means of controlling another computer interactively in a "shell" session. If you are familiar with a Mac the Terminal App launches a shell. The experience is similar but your working on a remote computer.  Today most web developers and web designers are expected to be comfortable working at the shell level and familar with both the _ssh_ and _scp_ Unix commands.  You can actually do allot more with _SSH_ than just terminal work but I will leave that for another article.  Finally we have HTTPS - this is the TLS wrapped version of HTTP. It allows us to communicate with webservers in a safer fashion (e.g. I can use my credit card at Amazon).
 
 ### Implications of encrypted services
 
-When HTTPS was first introduced is required more processing power from the machines running the webserver. Many websites would only resort to using it if they had to.  Today that is not as much of a problem. Many website use a load balancer and they provide direct hardware support for TLS.  Also most computers, even your phone, have multple cores (processors) that make easier work of encrypting and decrypting messages.  If you are setting up a website today it is better to setup with HTTPS support and redirect all traffic to it if you can.  It still have some headache for the developer and system admin though.  The scryption model supported by TLS uses [Public Key Encryption](http://en.wikipedia.org/wiki/Public-key_cryptography) to keep things safe. This means there are documents called a public key and private key have to be generated and managed appropriately. This documents usually referred to as certificates are the key to keeping things safe.  Additionally TLS like SSL before it trys to make sure that the end points you are communicating with are who they say they are. This is done by an exchange of public keys and "signing" the delivered content. If the host key does not match (or cannot be verified by an approved certificate authority) the transaction can be blocked or terminated. You see this most commonly when you access a developer machine where the developer is using a "self signed" certificate.  Getting your web browser to accept the certificate can either mean diving into the internals of your browser preferences or using a known certificate authority's generated certificate.  If you use a certificate authority they normally charge you money for the certificate hence the self signed certs developers use.
+When HTTPS was first introduced is required more processing power from the machines running the webserver. Many websites would only resort to using it if they had to.  Today that is not as much of a problem. Many website use a load balancer and they provide direct hardware support for TLS.  Also most computers, even your phone, have multple cores (processors) that make easier work of encrypting and decrypting messages.  If you are setting up a website today it is better to setup with HTTPS support and redirect all traffic to it if you can.  It still inflicts some headache for the developer and system admin but generally that is the price of business.
+
+The enscryption model supported by TLS uses [Public Key Encryption](http://en.wikipedia.org/wiki/Public-key_cryptography) to keep things safe. This means there are files called a public key and private key that need to be generated and managed appropriately. The keys are also referred to as certificates and credentials. TLS like SSL before it trys to make sure that the end points you are communicating with are who they say they are. This is done by an exchange of public keys and signing the delivered content. If the host key does not match (or cannot be verified by an approved certificate authority) the transaction can be blocked or terminated. You see this most commonly when you access a developer machine where the developer is using a "self signed" certificate.  Getting your web browser to accept the certificate can either mean diving into the internals of your browser preferences or using a known certificate issued by a known authority. If you use a certificate authority they normally charge you money for the certificate hence developers self sign.
+
 
 ## What the heck is [SPDY](http://en.wikipedia.org/wiki/SPDY)?
 
-A few years ago Google Inc. realized that HTTP/HTTPS traffic used allot of bandwidth. Allot of this was probably not necessary given the evolution of what was sent and received over the net.  They wanted to iprome this situation (it would save them cache and resources) and they proposed SPDY. SPDY is a name tradmarked by Google though they have evolving the protocol as an open standard.  Currently SPDY is at version 3. Firefox, Chrome, Opera, Safari and IE all support it. It has formed a test bed for our next protocol. SPDY is not so much a replacement for HTTP but an extension of it.
+A few years ago Google Inc. realized that HTTP/HTTPS traffic used allot of bandwidth in relationship to the content they were delivering. They wanted to improve the situation (it would save them money).  Like UDP/IP in relationship to TCP/IP they realized much of the HTTP transaction was not needed. The result of their research as SPDY. SPDY, a name tradmarked by Google, is an open protocol designed to augment HTTP and HTTPS.  Currently SPDY is at version 3. Evergreen versions of Firefox, Chrome, Opera, Safari and IE all support it. It has formed a test bed for our next generation of HTTP. Most popular webservers (e.g. Apache, NginX) now can support SPDY version 3. For the users of the web SPDY provides for better fit at the protocol layer for various types of content delivery or service interacitons. For the service providers it means a lower number of bytes transmitted and potentially more effecient resource usage on the server.
+
 
 ## HTTP/2
 
-As content usage and applications on the web have changed the original HTTP protocol is beginning to be long in the tooth.  With the success of alternatives like SPDY the web server and browser makers are getting ready for an update. Over the next few years we will see a shift in support and adoption. There is precidence for this. SSH went through a version 1 to 2 transition a few years back.  If we are building new web servers and services we should support SPDY version 3.1 today and plan to support [HTTP/2](http://en.wikipedia.org/wiki/HTTP/2) as RFC process moves on.
+As content usage and applications on the web have changed the original HTTP protocol is beginning to be long in the tooth.  With the success of alternatives like SPDY the web server and browser makers are getting ready for an update. Over the next year we are likely to see its support and adoption. [HTTP/2](http://en.wikipedia.org/wiki/HTTP/2) which as a draft specification in 2014 is moving through the RFC process in 2015. In the meantime we can get ready for the transition by taking advantage of SPDY version 3.1.
 
 
-## [WebRTC](http://www.webrtc.org/)
+## DTLS, SRTP and [WebRTC](http://www.webrtc.org/)
 
-One dream on the web has been for an easy way to send a link and have working per to per connections for things like text, audio and video connections.  This has been formalized in WebRTC which is a web protocol for real time communicatins without the requirement of plugins or server software. It works in a per-to-per fashion. With this you can use Chrome browser on one device, send a link a a Firefox users and have a video chat, or jointly type a document. Again _this happens without the need for a server component or some sort of plugin_. My guess is this will change the web significantly clever applications arrive.
+One dream on the web has been for an easy way to send a link and have working per to per connection for things like text, audio and video chat.  This capability has been formalized in an API called WebRTC and related protocols [DTLS](http://en.wikipedia.org/wiki/Datagram_Transport_Layer_Security) and [SRTP](http://en.wikipedia.org/wiki/Secure_Real-time_Transport_Protocol).  TDLS seeks to secure the packet layer effeciently and SRTP to proctect the content
+layer and prevent playing back the content in appropraitely.
 
 WebRTC project goes back to 2011 with support added in the development branches of the major browsers in 2014. With 2015 [WebRTC](http://caniuse.com/#feat=rtcpeerconnection) support is landing in stable branches of browsers for both desktop and mobile.
 
 WebRTC makes it easy to 
 
-+ send text messages without going through the phone company, Google or Facebook chat services
-+ it support per to per real time audio and video
-+ data share files per to per
-+ Mozilla implemented a JavaScript library for multi-user text editing using WebRTC last year.
++ provide realtime audio and video per to per communication (e.g. bypass WebEx)
++ direct per to per messaging rather than going through a services like Facebook, Google, Apple or your phone company
++ data transfer including text messaging and shared document editing
++ look for sensor networks adopting WebRTC support for [IoT](http://en.wikipedia.org/wiki/Internet_of_Things), Internet of Things, applications.
+
+Mozilla implemented a JavaScript library for multi-user text editing using WebRTC last year. Google demoed per to per video conferencing in 2011 when the project became public.  There are JavaScript libraries that can be used to polyfil browsers during the transition to full support.
 
 Except clever things to be done with WebRTC as the year progresses.
 
