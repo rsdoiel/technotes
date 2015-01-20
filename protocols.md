@@ -50,18 +50,18 @@ or spoke over.  That processs is a verbal information protocol.
 
 Let me illustrate what the protocol view of a conversation.
 
-1) I having an idea
-2) My brain translates the idea into a sequence of words
-3) I speak them and wait for a response
-4) You hearing sounds 
-5) You process those sounds into a sequence of words
-6) You interpret the sequence into a meaningful idea(s)
-7) You think of another idea to response
-8) Your brain translates the idea into a sequence of words
-9) You speak the words
-10) I hear the sounds
-11) I process those sounds into a sequence of words
-12) I interpret the sequence into a meanful idea(s)
+1. I having an idea
+2. My brain translates the idea into a sequence of words
+3. I speak them and wait for a response
+4. You hearing sounds 
+5. You process those sounds into a sequence of words
+6. You interpret the sequence into a meaningful idea(s)
+7. You think of another idea to response
+8. Your brain translates the idea into a sequence of words
+9. You speak the words
+10. I hear the sounds
+11. I process those sounds into a sequence of words
+12. I interpret the sequence into a meanful idea(s)
 
 Steps 1 through 12 describe a protocol (a set of expected steps to communicate).
 It also relies on other protocols - the organization of sounds into words we both understand.
