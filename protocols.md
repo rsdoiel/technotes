@@ -184,11 +184,11 @@ took place in plain text and could be eavesdroped very easily.
 
 There are several imporant influences on the net when Tim Berners-Lee dreams up the world wide web in CERN.
 
-1) The Internet expanded from a few institutions to a global collection of networks and systems (there were Internet accessible sites in America, Europe and Asia).
-2) The Internet shifted from part-time connection to full-time connections (e.g. creation and decline in usage of [UUCP](http://en.wikipedia.org/wiki/UUCP))
-3) The interactive Internet move beyond plain text to more immersive content including images, diagrams eventually video.
-4) With faster full time connctions new human organizations were possible (e.g. software development models moved from isolate shops who exchanges tapes to the open model assumed by Linus Torvolds and the spread of Linux)
-5) The Web increased the number of participants and decreated the barriers to participation.
+1. The Internet expanded from a few institutions to a global collection of networks and systems (there were Internet accessible sites in America, Europe and Asia).
+2. The Internet shifted from part-time connection to full-time connections (e.g. creation and decline in usage of [UUCP](http://en.wikipedia.org/wiki/UUCP))
+3. The interactive Internet move beyond plain text to more immersive content including images, diagrams eventually video.
+4. With faster full time connctions new human organizations were possible (e.g. software development models moved from isolate shops who exchanges tapes to the open model assumed by Linus Torvolds and the spread of Linux)
+5. The Web increased the number of participants and decreated the barriers to participation.
 
 No. 5 is important. The assumed trust did not prove reliable. Mischief changed from traditional April 1st jokes to more serious things.
 
