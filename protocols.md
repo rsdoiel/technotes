@@ -281,25 +281,35 @@ more effecient resource usage on the server.
 
 ## HTTP/2
 
-As content usage and applications on the web have changed the original HTTP protocol is beginning to be long in the tooth.  With the success of alternatives like SPDY the web server and browser makers are getting ready for an update. Over the next year we are likely to see its support and adoption. [HTTP/2](http://en.wikipedia.org/wiki/HTTP/2) which as a draft specification in 2014 is moving through the RFC process in 2015. In the meantime we can get ready for the transition by taking advantage of SPDY version 3.1.
+As content usage and applications on the web have changed the original HTTP protocol is beginning to be long in
+the tooth.  With the success of alternatives like SPDY the webserver and browser makers are getting ready for an 
+update. Over the next year we are likely to see its support and adoption of HTTP/2. 
+[HTTP/2](http://en.wikipedia.org/wiki/HTTP/2) which as a draft specification in 2014 is moving through the RFC 
+process as we start 2015. In the meantime we can get ready for the transition by taking advantage of SPDY version 
+3.1.
 
 
 ## DTLS, SRTP and [WebRTC](http://www.webrtc.org/)
 
-One dream on the web has been for an easy way to send a link and have working per to per connection for things like text, audio and video chat.  This capability has been formalized in an API called WebRTC and related protocols [DTLS](http://en.wikipedia.org/wiki/Datagram_Transport_Layer_Security) and [SRTP](http://en.wikipedia.org/wiki/Secure_Real-time_Transport_Protocol).  TDLS seeks to secure the packet layer effeciently and SRTP to proctect the content
-layer and prevent playing back the content in appropraitely.
+One dream on the Web has been for an easy way to send a link and have working per to per connection for things like 
+text, audio and video chat.  This capability has been formalized in an API called WebRTC and related protocols 
+[DTLS](http://en.wikipedia.org/wiki/Datagram_Transport_Layer_Security) and 
+[SRTP](http://en.wikipedia.org/wiki/Secure_Real-time_Transport_Protocol).  TDLS seeks to secure the packet layer 
+effeciently and SRTP to proctect the content layer and prevent playing back content in appropraitely.
 
-WebRTC project goes back to 2011 with support added in the development branches of the major browsers in 2014. With 2015 [WebRTC](http://caniuse.com/#feat=rtcpeerconnection) support is landing in stable branches of browsers for both desktop and mobile.
+WebRTC project goes back to 2011 with support added in the development branches of the major browsers in 2014. With 
+2015 [WebRTC](http://caniuse.com/#feat=rtcpeerconnection) support is landing in stable branches of browsers for 
+both desktop and mobile.
 
 WebRTC makes it easy to 
 
-+ provide realtime audio and video per to per communication (e.g. bypass WebEx)
-+ direct per to per messaging rather than going through a services like Facebook, Google, Apple or your phone company
-+ data transfer including text messaging and shared document editing
-+ look for sensor networks adopting WebRTC support for [IoT](http://en.wikipedia.org/wiki/Internet_of_Things), Internet of Things, applications.
++ Provide realtime audio and video via per to per communication (e.g. bypass WebEx)
++ Direct per to per messaging and file transfer rather than going through a services like Facebook, Google, Apple or your phone company
++ Look for sensor networks adopting WebRTC support for [IoT](http://en.wikipedia.org/wiki/Internet_of_Things), Internet of Things, applications.
 
-Mozilla implemented a JavaScript library for multi-user text editing using WebRTC last year. Google demoed per to per video conferencing in 2011 when the project became public.  There are JavaScript libraries that can be used to polyfil browsers during the transition to full support.
+Mozilla implemented a JavaScript library for multi-user text editing using WebRTC last year. Google demoed per to
+per video conferencing in 2011 when the project became public.  There are JavaScript libraries that can be used to
+polyfil browsers during the transition to full support.
 
 Except clever things to be done with WebRTC as the year progresses.
-
 
