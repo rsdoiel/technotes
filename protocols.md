@@ -104,16 +104,16 @@ In semi-historical order--
 TCP/IP is a grandfather protocol and pre-dates the Internet and Web.  
 It was created to allow computer networks to communicate among themselves.  In 
 the late 1960s there were many types of network. Most were proprietry and only communicated 
-with like networks. Inevitably these networks needed to be bridged together. The need was driven the 
-desire to share hardware resources and data. DARPA a coldwar era federal agency charged with 
-antipating threats and planning responses commissioned research in this area. It was responding
-to a basic war tactic of disruption and destroying ememy command and control structures.  
-Your own command and control structures need to survive conflict. DARPA funded ARPANET
-as a means of researching solutions to this problem.  TCP/IP comes from ARPANET 
-which is the parent of the Internet and grandparent of the Web.
+with like networks. Inevitably these networks needed to be bridged together. The need was driven by 
+the desire to share hardware resources and data. DARPA, a coldwar era federal agency, was
+charged with antipating threats and planning responses commissioned research in this area. 
+One focus was responding to a war tactic of disrupting and destroying ememy command and 
+control infrastructure.  DARPA funded ARPANET as a means of researching solutions to this 
+problem.  TCP/IP comes from ARPANET which is the parent of the Internet and
+grandparent of the Web.
+
 
 TCP stands for _Transmission Control Protocol_.  But what is it? 
-
 
 TCP defines the basic elements used to successfully communicate between computers 
 over an IP network. Software referred to as the TCP/IP stack breaks down the data 
