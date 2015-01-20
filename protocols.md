@@ -1,24 +1,23 @@
 
 # Network Protocals
 
-The internet is a network of networks.  Today we take this for granted.  
-In the past it was a challenge.
+The internet is a network of networks.  Today we take this for granted.  In the past it was
+a challenge.
 
-The successful network communication between computers is governed by
-[protocols](http://en.wikipedia.org/wiki/Internet_Protocol). In this article
-I am introducing a few specific protocols that collectively are known
-as IP or Internet Protocols. It is background for future technotes.
+The successful network communication between computers is governed by [protocols](http://en.wikipedia.org/wiki/Internet_Protocol). In this article I am introducing
+a few specific protocols that collectively are known as IP or Internet Protocols. It is
+background for future technotes.
 
 
 ## What is a protocol?
 
-A protocol is an agreed upon manner of interacting between two entities
-(e.g. a web browser talking to a webserver). Before computers protocols 
-referred to the rules of interaction in political bodies (e.g. a 
-royal court) and between nations.
+A protocol is an agreed upon manner of interacting between two entities (e.g. a web browser
+talking to a webserver). Before computers protocols referred to the rules of interaction in
+political bodies (e.g. a royal court) and between nations. It also has been used in medicine
+to describe the procedure to diagnosis and treat an illness.
 
-Today the term finds itself tied to computers and computer networks.  
-In that context I am using this definition--
+Today the term finds itself tied to computers and computer networks.  In that context I am
+using this definition--
 
 	A protocol is the agreed upon method of exchanging information 
 	between computers.
@@ -26,32 +25,30 @@ In that context I am using this definition--
 
 ### Why is this important?
 
-If your vocation involves the Web your vocation is made possible 
-because of protocols.  Internet Protocols (IP) are the foundations 
-the Web. I will use a building analogy to imply its importance. A 
-foundation is required by what you build on top of it. It provides the 
-platform and stability to work. Importantly what you put on top is 
-what most people notice (e.g. house, office building, park). This deminishes
-the appearence of importance.
+If your vocation involves the Web your vocation is made possible because of protocols.  I
+will use a building analogy to imply its importance. A foundation is required by what you
+build on top of it. It provides the platform and stability to work. Importantly what you put
+on top is what most people notice (e.g. house, office building, park). This deminishes the
+appearence of importance.
 
-If a building rests on a broken foundation it will become 
-structurally compromised. Similarly if you build a building without respecting its 
-foundation it can be structurally compromised. Understanding the foundation 
-helps you build a build that avoids compromise. On the web humans interact
-with webpages.  They think of the web through the lense of pages and web applications.
-But what those stand on it a set of protocols.  Abusing the protocols will cause problems
-for the website, application or web browser.
+If a building rests on a broken foundation it will become structurally compromised. Similarly
+if you build a building without respecting its foundation it can be structurally compromised.
+Understanding the foundation helps you build and avoid compromise. On the web humans interact
+with webpages.  They think of the web through the lense of pages and web applications. But what
+those stand on it a set of protocols.  Abusing the protocols will cause problemsfor the website,
+application or web browser.
+
 
 ### Are protocols for computers complicated?
 
-Yes and no, there are allot of specific details but the concepts are
-straight forward.  Let me explore human protocols first. When humans communicate 
-verbally we form sounds into words, words into phrases, phrases into sentences. 
-Generally one person speaks then another. Sometimes two people speak at the same 
-times overlapping.  Most of the time the conversation will still be understood 
-by both parties. We also can let the other person know when something was 
-confusing or spoke over us.  That informal processs is a verbal information protocol.  
-Let us follow that from in one persons head to another and back again.
+Yes and no, there are allot of specific details but the concepts are straight forward.
+Let me explore human protocols first. When humans communicate verbally we form sounds into
+words, words into phrases, phrases into sentences. Generally one person speaks then another.
+Sometimes two people speak at the same time.  Most of the time the conversation will still be
+understood by both parties. We also can let the other person know when something was confusing
+or spoke over.  That processs is a verbal information protocol. 
+
+Let me illustrate what the protocol view of a conversation.
 
 1) I having an idea
 2) My brain translates the idea into a sequence of words
@@ -59,10 +56,10 @@ Let us follow that from in one persons head to another and back again.
 4) You hearing sounds 
 5) You process those sounds into a sequence of words
 6) You interpret the sequence into a meaningful idea(s)
-7) You think of another idea to response with
+7) You think of another idea to response
 8) Your brain translates the idea into a sequence of words
 9) You speak the words
-10) I head the sounds
+10) I hear the sounds
 11) I process those sounds into a sequence of words
 12) I interpret the sequence into a meanful idea(s)
 
@@ -73,20 +70,21 @@ With human protocol we can be a bit fuzzy.  A Californian English accent is larg
 by someone from New York. Allot of fuzziness can be resolved through context.  With 
 computers we need to be very specific because computers and the network hardware 
 they rely on are very literal and tolerate ambiguity poorly. That is why protocols appear
-complicated. Little fuzziness is allowed.
+complicated. Fuzziness is replaced by explicit detail.
 
-Protocols can stack one on top of anther, used in parallel and used exclusively depending on their
-nature.  In computer technology we see protocol evolve, often with version numbers to identify
-expectations.  Often a lower level protocol (e.g. forming a sequence of sounds into a work) is abstracted
-by higher level protocols (e.g. using words to form sentences, sentence to form paragraphs).  
+Protocols can stack one on top of anther, be used in parallel and used exclusively depending on their
+nature.  In computer technology we see protocols evolve. We use version numbers to identify
+expectations (e.g. HTTP 1, HTTP/2).  Often a lower level protocol (e.g. forming a sequence of 
+sounds into a words) is abstracted by higher level protocols (e.g. using words to form sentences,
+sentence to form paragraphs).  
 
-On the Web our protocols are built on Internet Protocols which are built on lower level network protocols
-eventually drilling down to the hardware expectations that the electrons travel through.
+On the Web our protocols are built on Internet Protocols which are built on lower level network
+protocols eventually drilling down to the specific sequence of bits and bytes the hardware expects.
 
 
-# Important protocols January 2015
+# Important protocols, January 2015
 
-Below is a shortlist of protocols used today by Internet and Web.
+Below is a shortlist of protocols used today by the Internet and Web.
 In semi-historical order--
 
 + Part one
