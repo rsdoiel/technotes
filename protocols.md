@@ -195,45 +195,88 @@ No. 5 is important. The assumed trust did not prove reliable. Mischief changed f
 
 ## Some implications
 
-* When you convert binary content into text the data being transfer tends to grow larger. This lead to compression (strinking the text back down) and selective binary content transfer support.  
-* Some content changes frequently other rarely. HTTP Headers have evolved to help manage the difference
-* HTTP was created as a asynchronous protocol but humans like systems that are synchronous (i.e. context it carried between transactions), HTTP Headers have been used to help create context between asynchronous requests
-* [Ajax techniques](ihttp://en.wikipedia.org/wiki/Ajax_(programming)) are limited by basic fundimentals of TCP/IP and HTTP it is "heavy" in the same way that TCP/IP is "heavy" compared to UDP/IP, new protocols and APIs like WebSockets have evolved to replace Ajax transactions.
-* HTTP Headers can also become large so alternative protocols are evolving to manage that
+* When you convert binary content into text the data being transfer tends to grow larger. This lead to optional use of compression in webservers.
+* Content changes at different rates. HTTP Headers have evolved to help manage/take advantage of the difference.
+* HTTP was created as a asynchronous protocol but humans like systems that are synchronous, HTTP Headers have been used to help create context between asynchronous requests.
+* [Ajax techniques](ihttp://en.wikipedia.org/wiki/Ajax_(programming)) are limited by basic fundimentals of TCP/IP and HTTP it is "heavy" in the same way that TCP/IP is "heavy" compared to UDP/IP. New protocols and APIs like WebSockets have evolved to replace Ajax transactions.
 * A web page today is likely more than one document
 	* Each (sub)document goes through a request process (even if it is only a header exchange) 
 	* Each document request eats up network connections and take time. 
 	* A major challenge today is wrangle the web page such that there is a balance in the number of requets, size of documents and round trip connection time need to assemble the final view.
-* In 1989 you were lucky to find 100 people looking at your website, today it is reasonable to assume you have suppport thousands and even tens of thousands of symultaneious requests. This is known as the [C10K](http://www.kegel.com/c10k.html) problem. The term was coined by Dan Kregal in 1999. Even in 2015 I find it challenging to get my colleagues to appreciate the implications of this when building websites. 
+* In 1989 you were lucky to find 100 people looking at your website, today it is reasonable to assume you have suppport thousands and even tens of thousands of symultaneious requests. 
 
-Part of the C10K problem is hidden by how we view the web today. We view the web through the lense of webpages. Humans tend to view a webpage as one document because that is how we experience it. That turns out to rarely be the case today.  A poorly designed webpage can range turn into a request for hundreds of documents. This easier to see when you consider that a webpage often has many image files, CSS files (describing layout), JavaScript files (containing behaviors). The latter two can in turn request more files. Send this down a slow and conguested celluar data network and you a very unpleasnt and frustratine experience.
+The explosion in web traffic can be framed by what is called the [C10K](http://www.kegel.com/c10k.html) 
+problem. The term was coined by Dan Kregal in 1999. Even in 2015 I find it challenging to get my 
+colleagues to appreciate the implications of this when building websites. 
+
+Part of the C10K problem is hidden by how we view the web today. We view the web through the lense of webpages.
+Humans tend to view a webpage as one document because that is how we experience it. That turns out to rarely be the 
+case today.  A poorly designed webpage can range turn into a request for hundreds of documents. This easier to see 
+when you consider that a webpage often has many image files, CSS files (describing layout), JavaScript files 
+(containing behaviors). The latter two can in turn request more files. Send this down a slow or conguested 
+network (Edge, like 3G, 4G, 4G LTE) and you a very unpleasant and frustratine experience.
 
 
 ## SSL, TLS, SFTP and SSH
 
 So FTP, Telnet and HTTP started out as clear text protocols with a problem of eavesdropping. How do we address
-that? Why create some more protocols of course.  When to humans communication over a distance in written form
+that? We create some more protocols.  When humans communication over a distance in written form
 and want to prevent eavesdropping they can write their messages in code. That is also what we can do with
 computer protocols. The specifics for how you wrap your clear text in encryption is addressed by the SSL protocol.
 
-SSL stands for secure sockets layer.  The basic idea is to combine encryption the information before it is broken into TCP/IP or UDP/IP packets. Since FTP, Telnet and HTTP are build on TCP/IP and SSL privides a mechanism for wrapping those protocols in encryption. Doing allows us to make a safe FTP now called SFTP, a safer HTTP called HTTPS. Telenet itself was superceded by SSH which provided a secure means of accomplishing the same goals.
+SSL stands for secure sockets layer.  The basic idea is to combine encryption the information before it is broken 
+into TCP/IP or UDP/IP packets. Since FTP, Telnet and HTTP are build on TCP/IP and SSL privides a mechanism for 
+wrapping those protocols in encryption. This allows us to make a secure FTP now called SFTP, a safer HTTP called 
+HTTPS. Telenet itself was superceded by SSH which provided a secure means of accomplishing the same goals.
 
-Unfortunately SSL proved to be breakable. It has largely been replaced by [TLS](http://en.wikipedia.org/wiki/Transport_Layer_Security) - Transport Layer Security. If you are talking with someone about computer security they tend to be specific about the transport security layer and they will make a distinction between SSL and TLS. If you are talking with someone causally often people will say SSL when they really mean TLS. To muddy the waters some there are programming libraries that use SSL in their method names when they actually implement TLS. The bottom line is you want to use TLS. It is the standard today for encrypting the channels of communicaiton. One of Fall 2014 big security issues was that many websites and services had not upgraded to TLS support.  Do to the high profile compromises
-many organizations had to scramble to switch all their systems and services to use the newer more secure TLS.
+Unfortunately SSL proved to be breakable. It has largely been replaced by 
+[TLS](http://en.wikipedia.org/wiki/Transport_Layer_Security) - Transport Layer Security. If you are talking with 
+someone about computer security they tend to be specific about the transport security layer and they will make a 
+distinction between SSL and TLS. If you are talking with someone causally often people will say SSL when they really
+mean TLS. To muddy waters further there are programming libraries that use SSL in their method names when they 
+actually implement TLS. The bottom line is you want to use TLS. It is the standard today for encrypting the 
+channels of communicaiton. One of Fall 2014 big security issues was that many websites and services had not
+upgraded to TLS support.  Do to the high profile compromises many organizations had to scramble to switch all
+their systems and services to use the newer more secure TLS.
 
-Current versions of most web browsers, SFTP, SSH and HTTPS today uses TLS. 
+Evergreen versions of most web browsers, SFTP, SSH and HTTPS today uses TLS. 
 
 
 ### Implications of encrypted services
 
-When HTTPS was first introduced is required more processing power from the machines running the webserver. Many websites would only resort to using it if they had to.  Today that is not as much of a problem. Many website use a load balancer and they provide direct hardware support for TLS.  Also most computers, even your phone, have multple cores (processors) that make easier work of encrypting and decrypting messages.  If you are setting up a website today it is better to setup with HTTPS support and redirect all traffic to it if you can.  It still inflicts some headache for the developer and system admin but generally that is the price of business.
+When HTTPS was first introduced it is required more processing power from the machines running the webserver. Many 
+websites would only resort to using it if they had to.  Today that is not as much of a problem. Many website use a 
+load balancer and they provide direct hardware support for TLS.  Also most computers, even your phone, have multple 
+cores (processors) that make easier work of encrypting and decrypting messages.  If you are setting up a website 
+today it is better to setup with HTTPS support and redirect all traffic to it if you can.  It still inflicts some 
+headache for the developer and system admin but generally that is a reasonable price of business.
 
-The enscryption model supported by TLS uses [Public Key Encryption](http://en.wikipedia.org/wiki/Public-key_cryptography) to keep things safe. This means there are files called a public key and private key that need to be generated and managed appropriately. The keys are also referred to as certificates and credentials. TLS like SSL before it trys to make sure that the end points you are communicating with are who they say they are. This is done by an exchange of public keys and signing the delivered content. If the host key does not match (or cannot be verified by an approved certificate authority) the transaction can be blocked or terminated. You see this most commonly when you access a developer machine where the developer is using a "self signed" certificate.  Getting your web browser to accept the certificate can either mean diving into the internals of your browser preferences or using a known certificate issued by a known authority. If you use a certificate authority they normally charge you money for the certificate hence developers self sign.
+The enscryption model supported by TLS uses [Public Key 
+Encryption](http://en.wikipedia.org/wiki/Public-key_cryptography) to keep things safe. This means there are files 
+called a public key and private key that need to be generated and managed appropriately. The keys are also referred 
+to as certificates and credentials. TLS like SSL before it trys to make sure that the end points you are 
+communicating with are who they say they are. This is done by an exchange of public keys and signing the delivered 
+content. If the host key does not match (or cannot be verified by an approved certificate authority) the
+transaction can be blocked or terminated. You see this most commonly when you access a developer machine where the
+developer is using a "self signed" certificate.  Getting your web browser to accept the certificate can either mean 
+diving into the internals of your browser preferences or using a known certificate issued by a known authority. If 
+you use a certificate authority they normally charge you money for the certificate hence developers self sign.
 
 
 ## What the heck is [SPDY](http://en.wikipedia.org/wiki/SPDY)?
 
-A few years ago Google Inc. realized that HTTP/HTTPS traffic used allot of bandwidth in relationship to the content they were delivering. They wanted to improve the situation (it would save them money).  Like UDP/IP in relationship to TCP/IP they realized much of the HTTP transaction was not needed. The result of their research as SPDY. SPDY, a name tradmarked by Google, is an open protocol designed to augment HTTP and HTTPS.  Currently SPDY is at version 3. Evergreen versions of Firefox, Chrome, Opera, Safari and IE all support it. It has formed a test bed for our next generation of HTTP. Most popular webservers (e.g. Apache, NginX) now can support SPDY version 3. For the users of the web SPDY provides for better fit at the protocol layer for various types of content delivery or service interacitons. For the service providers it means a lower number of bytes transmitted and potentially more effecient resource usage on the server.
+A few years ago Google Inc. realized that HTTP/HTTPS traffic used allot of bandwidth in relationship to the content 
+they were delivering. They wanted to improve the situation (it would save them money).  Like UDP/IP in relationship 
+to TCP/IP they realized much of the HTTP transaction was not needed. The result of their research was SPDY. SPDY, a 
+name tradmarked by Google, is an open protocol designed to augment HTTP and HTTPS.  Currently SPDY is at version 3. 
+Evergreen versions of Firefox, Chrome, Opera, Safari and IE all support it. It has formed a test bed for our next 
+generation of HTTP. Most popular webservers (e.g. Apache, NginX) now can support SPDY version 3. It does require
+installation and configuration of the SPDY modules.  Once setup ongoing management of SPDY support is generally 
+limited to intervention when versions change. 
+
+For the users of the Web SPDY provides for better fit at the protocol layer for various types of content delivery 
+or service interacitons. For the service providers it means a lower number of bytes transmitted and potentially 
+more effecient resource usage on the server.
 
 
 ## HTTP/2
