@@ -116,12 +116,11 @@ grandparent of the Web.
 TCP stands for _Transmission Control Protocol_.  But what is it? 
 
 TCP defines the basic elements used to successfully communicate between computers 
-over an IP network. Software referred to as the TCP/IP stack breaks down the data 
-to communicate between computers into smaller chunks which in turn are assembled 
-packates and data grams. These packats travel through the network (over wire, 
-fiber or wireless spectrum) then get assembled again at the other end.  
-This includes the data the computer is trying to communicate plus the necessary 
-information to help it arrive at the final destination.  
+over an IP network. Software referred to as the TCP/IP stack breaks down the content 
+into smaller chunks which in turn are assembled packets and data grams. These packets
+travel through the network (over wire, fiber or wireless spectrum) then get assembled
+again at the other end. This contents transmitted include the data the computer is trying 
+send as well as additional information about the final destination.  
 
 An important feature of TCP is that is manages to keep those packets ordered even 
 when some paths across the network might be conguested or unresponsive. This 
@@ -129,8 +128,8 @@ means if I type "Hello World" into a chat program at work chatting with my
 friend in another place it still comes out "Hello World" on the otherside and 
 not "WorldHe llo".
 
-TCP was optimized for send streams of information, usually text, between computers. 
-It supports interactive communications.
+TCP was optimized for sending streams of information, usually text, between computers. 
+TCP enabling building tools for interactive communications between computers.
 
 Another important grandfather protocol is UDP - User Datagram Protocol.  It dates 
 from the 1980s. It is used when TCP is considered too heavey to be practical.  UDP 
@@ -138,20 +137,20 @@ achieves this slimming down by dropping some of the guarantees that TCP insists 
 This includes assertions about order and confirmation about successful transmission. UDP 
 is particularly useful when delay in communications is more harmful than a missed or 
 corrupted delivery.  Many _real time_ protocols build on UDP. An example would be 
-voice communications and event log streaming. 
+voice communications.
 
 
 ### FTP and Telnet
 
 Sending TCP or UDP data packets between computers is not an end in itself.  People want to do things with
-computers.  Two protocols built on top of TCP/IP and UDP/IP are FTP and Telnet.  Before the Web 
+computers.  Two protocols built on top of TCP/IP are FTP and Telnet.  Before the Web 
 and Internet moving data from computer site to another often involved copying information to tape and 
 physically sending the tape to another location (e.g. via the Post office). When computing sites started 
-being network together an early use case was sending data from one system to another over the network.  
-The common data unit was a file. The need to making it easier to consistently send, receive and manage files 
-across different computers spawned the creation of FTP - File Transfer Protocl. The Unix command that
-provided a means to use the protocol also bares the same name. Likewise accessing and controlling a
-remote computer over a TCP/IP spawned Telnet which refers to both a protocol and Unix command.
+being networked an early use case was sending data files from one system to another over the network.  
+The need to making it easier to consistently send, receive and manage files across different computers
+spawned the creation of FTP - File Transfer Protocl. The Unix command that provided a means to use the
+protocol also bares the same name. Likewise accessing and controlling a remote computer over a TCP/IP
+spawned Telnet which refers to both a protocol and Unix command.
 
 When FTP and Telnet were first created they were used on closed networks. As a result the primary risk of
 compromised assumed physical access to the network hardware or computers on that network. All transactions
@@ -162,35 +161,39 @@ friendly network changed.
 ## HTTP
 
 HTTP stands for Hypertext Transfer Protocol. It coordinates the transmition of text, 
-images, and even video across networks. It is used by servers who store and distribute content as well as web browser and mobile applications that receive the content. It is the enabling protocol of the Web. HTTP protocol supports a few _verbs_ for interacting
-with content.  Unlike FTP that content does not have to be a file it could the output of a program (e.g. a web service) but often it is a file. Along with a few verbs HTTP also supports metadata about the item being
+images, and even video across networks. It is used by servers who store and distribute content 
+as well as web browser and mobile applications that receive the content. It is the enabling 
+protocol of the Web. HTTP protocol supports a few _verbs_ for interacting with content.  Unlike
+FTP that content does not have to be a file. It could the output of a program (e.g. a web service)
+but often it is a file. Along with a few verbs HTTP also supports metadata about the item being
 requested or sent. This metadata includes things like size, file type. It can also include things like
-authorization tokens, browser state (e.g. cookies).  It is quiet flexible.  The common verbs of HTTP are GET, POST,
-PUT, DELETE, HEAD. Each services a purpose. One of the clever applications of these verbs is REST - Representational State Transfer which allows a database like mapping of actions - create, read, update and delete by mapping
-to POST, GET, PUT and DELETE along with other metadata provided in the HTTP Header.
+authorization tokens, browser state (e.g. cookies).  It is quiet flexible.  The common verbs of HTTP 
+are GET, POST, PUT, DELETE, HEAD. Each services a purpose. One of the clever applications of these 
+verbs is REST - Representational State Transfer which allows a database like mapping of actions - 
+create, read, update and delete by mapping to POST, GET, PUT and DELETE along with other metadata provided
+in the HTTP Header.
 
 HTTP is an asyncronous protocol unlike Telnet.  By clever use of the HTTP Headers we can build a interaction
 which is syncronous and this experience is what we see in web applications like GMail or buying something at Amazon.
 
-When the web started supporting more sensitive transctions (e.g. transporting private communications, 
-on-line purchased) HTTP revealed a problem. Like FTP and Telnet before it all the transaction over the network
+When the Web started supporting more sensitive transctions revealed a problem (e.g. transporting private communications, on-line purchases). Like FTP and Telnet before it all the transaction over the network
 took place in plain text and could be eavesdroped very easily.
 
 
-## A pause for context
+## Some context
 
 There are several imporant influences on the net when Tim Berners-Lee dreams up the world wide web in CERN.
 
 1) The Internet expanded from a few institutions to a global collection of networks and systems (there were Internet accessible sites in America, Europe and Asia).
-2) The Internet has shifted from part-time connection to full-time connections (e.g. creation and decline in usage of [UUCP](http://en.wikipedia.org/wiki/UUCP))
+2) The Internet shifted from part-time connection to full-time connections (e.g. creation and decline in usage of [UUCP](http://en.wikipedia.org/wiki/UUCP))
 3) The interactive Internet move beyond plain text to more immersive content including images, diagrams eventually video.
 4) With faster full time connctions new human organizations were possible (e.g. software development models moved from isolate shops who exchanges tapes to the open model assumed by Linus Torvolds and the spread of Linux)
 5) With the arrival of the Web the number of participants rapidally increased as barriers to entry dropped.
 
-#5 is important. The assumed trust did not prove reliable. Mischief changed from traditional April 1st jokes to things more serious. Before DARPANet it often was necessary to gain physical access to a system to compromise it. By the arrival of the Internet that was not the case.
+#5 is important. The assumed trust did not prove reliable. Mischief changed from traditional April 1st jokes to things more serious.
 
 
-## A pause for implications
+## Some implications
 
 * When you convert binary content into text the data being transfer tends to grow larger. This lead to compression (strinking the text back down) and selective binary content transfer support.  
 * Some content changes frequently other rarely. HTTP Headers have evolved to help manage the difference
