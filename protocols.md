@@ -1,27 +1,24 @@
 
-# Protocals
+# Network Protocals
 
-## An internet history lesson through exploring protocols
+The internet is a network of networks.  Today we take this for granted.  
+In the past it was a challenge.
 
-The internet is a network of networks.  It is important that
-the computers can communicate reliably among themselves as well as 
-across external networks. Today we take this for granted.  In the past
-it was a challenge.
-
-The successful communication between computers are governed by
-[protocols](http://en.wikipedia.org/wiki/Internet_Protocol). In the article
-I am address a few specific protocols that collectively are known
-as IP or Internet Protocols.
+The successful network communication between computers is governed by
+[protocols](http://en.wikipedia.org/wiki/Internet_Protocol). In this article
+I am introducing a few specific protocols that collectively are known
+as IP or Internet Protocols. It is background for future technotes.
 
 
 ## What is a protocol?
 
-A protocol is an agreed upon manner of transaction (e.g. communicaition)
-between two entities.  Before computers protocols referred to the rules
-of interaction in political bodies (e.g. a royal court) and between nations.
+A protocol is an agreed upon manner of interacting between two entities
+(e.g. a web browser talking to a webserver). Before computers protocols 
+referred to the rules of interaction in political bodies (e.g. a 
+royal court) and between nations.
 
 Today the term finds itself tied to computers and computer networks.  
-In that context I am using this deffinition--
+In that context I am using this definition--
 
 	A protocol is the agreed upon method of exchanging information 
 	between computers.
@@ -29,28 +26,32 @@ In that context I am using this deffinition--
 
 ### Why is this important?
 
-If your vocation involves the world wide web your vocation is made possible 
-because of protocols.  Protocols are the foundation the web is 
-built. I will use a building analogy to discribe of importance. A 
+If your vocation involves the Web your vocation is made possible 
+because of protocols.  Internet Protocols (IP) are the foundations 
+the Web. I will use a building analogy to imply its importance. A 
 foundation is required by what you build on top of it. It provides the 
-platform and stability to work. Importantly what you put on top if it is 
-what most people notice (e.g. house, office building, park).
-If a building rests a broken foundation it will become 
-structurally compromised. If you build a building without respecting its 
+platform and stability to work. Importantly what you put on top is 
+what most people notice (e.g. house, office building, park). This deminishes
+the appearence of importance.
+
+If a building rests on a broken foundation it will become 
+structurally compromised. Similarly if you build a building without respecting its 
 foundation it can be structurally compromised. Understanding the foundation 
 helps you build a build that avoids compromise. On the web humans interact
-with webpages.  The think of the web through the lense of pages and web applications.
-But what those stand on it a set of protocols.  Abusing the protocols will problems
-for the site, application or web browser.
+with webpages.  They think of the web through the lense of pages and web applications.
+But what those stand on it a set of protocols.  Abusing the protocols will cause problems
+for the website, application or web browser.
 
-### Are protocols for computers are complicated?
+### Are protocols for computers complicated?
 
-Let me explore human protocols first. When humans communicate verbally we form sounds into words, 
-words into pharses, phrases into sentenses. Generally one person speaks then another. Sometimes 
-two people speak at the same times overlapping.  Most of the time the conversation will still be understood 
-by both parties. We also can let the other person know when something was confusing or spoke over us. 
-That informal processs is a verbal information protocol.  We can breakdown the process
-a but more by looking at what happens for one of the people talking and then listening.
+Yes and no, there are allot of specific details but the concepts are
+straight forward.  Let me explore human protocols first. When humans communicate 
+verbally we form sounds into words, words into phrases, phrases into sentences. 
+Generally one person speaks then another. Sometimes two people speak at the same 
+times overlapping.  Most of the time the conversation will still be understood 
+by both parties. We also can let the other person know when something was 
+confusing or spoke over us.  That informal processs is a verbal information protocol.  
+Let us follow that from in one persons head to another and back again.
 
 1) I having an idea
 2) My brain translates the idea into a sequence of words
@@ -58,24 +59,28 @@ a but more by looking at what happens for one of the people talking and then lis
 4) You hearing sounds 
 5) You process those sounds into a sequence of words
 6) You interpret the sequence into a meaningful idea(s)
-7) You think of an idea to response with
+7) You think of another idea to response with
 8) Your brain translates the idea into a sequence of words
-9) You speak the words and I precieve it as a response
+9) You speak the words
+10) I head the sounds
+11) I process those sounds into a sequence of words
+12) I interpret the sequence into a meanful idea(s)
 
-We can have several protocols applied here. There is the use of a common human language. We agree
-mostly on what are words and generally what they mean. We have a call and response protocol so that
-we minimize confusion and have time (a small time) to think between all the computational work
-of create language structures, speaking them and decoding them. This standard is a protocol.
+Steps 1 through 12 describe a protocol (a set of expected steps to communicate).
+It also relies on other protocols - the organization of sounds into words we both understand.
 
-Protocol is just sorted out structure. With computers we need to be very specific because computers
-and the network hardware they rely on are very literal and tolerate ambiguity poorly.
+With human protocol we can be a bit fuzzy.  A Californian English accent is largely understandable
+by someone from New York. Allot of fuzziness can be resolved through context.  With 
+computers we need to be very specific because computers and the network hardware 
+they rely on are very literal and tolerate ambiguity poorly. That is why protocols appear
+complicated. Little fuzziness is allowed.
 
 Protocols can stack one on top of anther, used in parallel and used exclusively depending on their
 nature.  In computer technology we see protocol evolve, often with version numbers to identify
 expectations.  Often a lower level protocol (e.g. forming a sequence of sounds into a work) is abstracted
 by higher level protocols (e.g. using words to form sentences, sentence to form paragraphs).  
 
-In our work web protocols are built on internet protocols which are built on lower level network protocols
+On the Web our protocols are built on Internet Protocols which are built on lower level network protocols
 eventually drilling down to the hardware expectations that the electrons travel through.
 
 
@@ -100,7 +105,7 @@ In semi-historical order--
 
 TCP/IP is a grandfather protocol and pre-dates the Internet and Web.  
 It was created to allow computer networks to communicate among themselves.  In 
-the late 1960s there were many types of network. Most were proprietry and only coud communicate 
+the late 1960s there were many types of network. Most were proprietry and only communicated 
 with like networks. Inevitably these networks needed to be bridged together. The need was driven the 
 desire to share hardware resources and data. DARPA a coldwar era federal agency charged with 
 antipating threats and planning responses commissioned research in this area. It was responding
@@ -112,11 +117,30 @@ which is the parent of the Internet and grandparent of the Web.
 TCP stands for _Transmission Control Protocol_.  But what is it? 
 
 
-TCP defines the basic elements used to successfully communicate between computers over an IP network. Software referred to as the TCP/IP stack breaks down the data to communicate between computers into smaller chunks which in turn are assembled into data grams and packets. These packats travel through the network (over wire, fiber or wireless spectrum) then get assembled again at the other end.  This includes the data the computer is trying to communicate plus the necessary information to help it arrive at the final destination.  An important feature of TCP is that is manages to keep those packets ordered even when some paths across the network might be conguested or unresponsive. This means if I type "Hello World" into a chat program at work chatting with my friend in another place it still comes out "Hello World" on the otherside and not "WorldHe llo".
+TCP defines the basic elements used to successfully communicate between computers 
+over an IP network. Software referred to as the TCP/IP stack breaks down the data 
+to communicate between computers into smaller chunks which in turn are assembled 
+packates and data grams. These packats travel through the network (over wire, 
+fiber or wireless spectrum) then get assembled again at the other end.  
+This includes the data the computer is trying to communicate plus the necessary 
+information to help it arrive at the final destination.  
 
-TCP was optimized for send streams of information, usually text, between computers. It supports interactive communications.
+An important feature of TCP is that is manages to keep those packets ordered even 
+when some paths across the network might be conguested or unresponsive. This 
+means if I type "Hello World" into a chat program at work chatting with my 
+friend in another place it still comes out "Hello World" on the otherside and 
+not "WorldHe llo".
 
-Another important grandfather protocol is UDP - User Datagram Protocol.  It dates from the 1980s. It is used when TCP is considered too heavey to be practical.  UDP achieves this slimming down by dropping some of the guarantees that TCP insists on. This includes assertions about order and confirmation about successful transmission. UDP is particularly useful when delay in communications is more harmful than a missed or corrupted delivery.  Many _real time_ protocols build on UDP. An example would be early voice communications, event log streaming. 
+TCP was optimized for send streams of information, usually text, between computers. 
+It supports interactive communications.
+
+Another important grandfather protocol is UDP - User Datagram Protocol.  It dates 
+from the 1980s. It is used when TCP is considered too heavey to be practical.  UDP 
+achieves this slimming down by dropping some of the guarantees that TCP insists on. 
+This includes assertions about order and confirmation about successful transmission. UDP 
+is particularly useful when delay in communications is more harmful than a missed or 
+corrupted delivery.  Many _real time_ protocols build on UDP. An example would be 
+voice communications and event log streaming. 
 
 
 ### FTP and Telnet
@@ -129,26 +153,18 @@ being network together an early use case was sending data from one system to ano
 The common data unit was a file. The need to making it easier to consistently send, receive and manage files 
 across different computers spawned the creation of FTP - File Transfer Protocl. The Unix command that
 provided a means to use the protocol also bares the same name. Likewise accessing and controlling a
-remote computer over a TCP/IP spawned Telnet which refers to both an protocol and Unix command.
-
-Often protocols start out as a explicit reflection on a specific software application. Over time though
-the protocol can be used by other applications for other purposes generalizing its application.
-
-Telnet provided by directional communications between computers and was designed for interactive computing
-(e.g. I type in a command and it gets run on the remote computer with its output visit on my screen).  FTP
-was focused on file management and access.  The normal workflow on the remote system was generally limited
-to creating a file, renaming a file, sending and receiving a file. Eventually additional functionality was
-added like listing the available files; creating, deleting, renaming directories of files.
+remote computer over a TCP/IP spawned Telnet which refers to both a protocol and Unix command.
 
 When FTP and Telnet were first created they were used on closed networks. As a result the primary risk of
 compromised assumed physical access to the network hardware or computers on that network. All transactions
 using either protocol were visible in plain text.  When the Internet arrived the assumption of a 
-friendly network had to change.
+friendly network changed.
 
 
 ## HTTP
 
-HTTP stands for Hypertext Transfer Protocol. It coordinates the transmition of text, images, and even video across networks. It is used by servers who store and distribute content as well as web browser and mobile applications that receive the content. It is the enabling protocol of the Web. HTTP protocol supports a few _verbs_ for interacting
+HTTP stands for Hypertext Transfer Protocol. It coordinates the transmition of text, 
+images, and even video across networks. It is used by servers who store and distribute content as well as web browser and mobile applications that receive the content. It is the enabling protocol of the Web. HTTP protocol supports a few _verbs_ for interacting
 with content.  Unlike FTP that content does not have to be a file it could the output of a program (e.g. a web service) but often it is a file. Along with a few verbs HTTP also supports metadata about the item being
 requested or sent. This metadata includes things like size, file type. It can also include things like
 authorization tokens, browser state (e.g. cookies).  It is quiet flexible.  The common verbs of HTTP are GET, POST,
