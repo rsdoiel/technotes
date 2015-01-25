@@ -1,3 +1,3 @@
 # rsdoiel/technotes
 
-Quick one page summaries of technical topics for my friends and colleagues.
+Quick one page summaries on technical topics for my non-engineering friends and colleagues.
